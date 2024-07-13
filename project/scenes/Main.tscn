@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=6 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
 [ext_resource type="Script" path="res://scripts/Game Development.gd" id="3_v448c"]
+[ext_resource type="Script" path="res://scripts/Game Modding.gd" id="4_ryv0e"]
+[ext_resource type="Script" path="res://scripts/Other.gd" id="5_hga6g"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -36,7 +38,7 @@ grow_vertical = 0
 theme = ExtResource("1_go8je")
 text = "Back"
 
-[node name="Main Menu" type="Control" parent="." node_paths=PackedStringArray("button_container", "title_label", "game_development_control")]
+[node name="Main Menu" type="Control" parent="." node_paths=PackedStringArray("button_container", "title_label", "game_development_control", "game_modding_control", "other_control")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,6 +50,8 @@ script = ExtResource("1_3wqkq")
 button_container = NodePath("VBoxContainer")
 title_label = NodePath("../Title")
 game_development_control = NodePath("../Game Development")
+game_modding_control = NodePath("../Game Modding")
+other_control = NodePath("../Other")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu"]
 layout_mode = 1
@@ -98,7 +102,34 @@ back_button = NodePath("../BackButton")
 main_menu_control = NodePath("../Main Menu")
 back_button_end_position = Vector2(70, 970)
 
+[node name="Game Modding" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_ryv0e")
+title_label = NodePath("../Title")
+back_button = NodePath("../BackButton")
+main_menu_control = NodePath("../Main Menu")
+back_button_end_position = Vector2(70, 970)
+
+[node name="Other" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("5_hga6g")
+title_label = NodePath("../Title")
+back_button = NodePath("../BackButton")
+main_menu_control = NodePath("../Main Menu")
+back_button_end_position = Vector2(70, 970)
+
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
+[connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
+[connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]
 [connection signal="pressed" from="Main Menu/VBoxContainer/GameDevelopment" to="Main Menu" method="_on_game_development_pressed"]
 [connection signal="pressed" from="Main Menu/VBoxContainer/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
 [connection signal="pressed" from="Main Menu/VBoxContainer/Artstation" to="Main Menu" method="_on_artstation_pressed"]

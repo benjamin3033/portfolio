@@ -6,6 +6,8 @@ extends Control
 
 @export_category("Pages")
 @export var game_development_control : Control
+@export var game_modding_control : Control
+@export var other_control : Control
 
 
 func _on_game_development_pressed():
@@ -14,7 +16,8 @@ func _on_game_development_pressed():
 
 
 func _on_game_modding_pressed():
-	hide_main_menu()
+	await hide_main_menu()
+	game_modding_control.show_screen()
 
 
 func _on_artstation_pressed():
@@ -22,7 +25,8 @@ func _on_artstation_pressed():
 
 
 func _on_other_pressed():
-	hide_main_menu()
+	await hide_main_menu()
+	other_control.show_screen()
 
 
 func hide_main_menu():

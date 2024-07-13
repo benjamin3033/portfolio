@@ -11,7 +11,7 @@ extends Control
 var active = false
 
 func show_screen():
-	title_label.text = "Game Development"
+	title_label.text = "Other"
 	active = true
 	var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(title_label, "position", title_end_position, 0.2)
@@ -25,7 +25,7 @@ func _on_back_button_pressed():
 	
 	await hide_screen()
 	active = false
-	main_menu_control.show_screen()
+	main_menu_control.show_screen() 
 
 
 func hide_screen():

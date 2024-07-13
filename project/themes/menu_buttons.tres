@@ -1,0 +1,67 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dead0m1eas4n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4g5g"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.140447, 0.140447, 0.140447, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.755386, 0.755386, 0.755386, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qv521"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.140447, 0.140447, 0.140447, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.755386, 0.755386, 0.755386, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qet8w"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.26779, 0.26779, 0.26779, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.755386, 0.755386, 0.755386, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xxwl"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.140447, 0.140447, 0.140447, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.755386, 0.755386, 0.755386, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxy1k"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.26779, 0.26779, 0.26779, 1)
+border_color = Color(0.755386, 0.755386, 0.755386, 1)
+
+[resource]
+default_font_size = 40
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 40
+Button/styles/disabled = SubResource("StyleBoxFlat_l4g5g")
+Button/styles/focus = SubResource("StyleBoxFlat_qv521")
+Button/styles/hover = SubResource("StyleBoxFlat_qet8w")
+Button/styles/normal = SubResource("StyleBoxFlat_3xxwl")
+Button/styles/pressed = SubResource("StyleBoxFlat_fxy1k")

@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp7yk4478nxaq"]
+
+[ext_resource type="Script" path="res://scripts/album.gd" id="1_j6vhq"]
+[ext_resource type="Texture2D" uid="uid://daxr4sl0et30m" path="res://images/A Night at the Graveyard/anatgy1.jpg" id="2_jg35o"]
+
+[node name="Album" type="Panel"]
+clip_children = 2
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+script = ExtResource("1_j6vhq")
+time_between = 8.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_jg35o")
+expand_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="Button" to="." method="skip_image"]

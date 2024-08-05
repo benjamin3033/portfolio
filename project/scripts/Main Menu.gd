@@ -1,8 +1,11 @@
 extends Control
 
 
-@export var button_container : VBoxContainer
+@export var button_container : Control
 @export var title_label : Label
+
+@onready var title_start_position : Vector2 = title_label.position
+@onready var button_container_start_position : Vector2 = button_container.position
 
 @export_category("Pages")
 @export var game_development_control : Control
@@ -39,6 +42,6 @@ func hide_main_menu():
 func show_screen():
 	title_label.text = "Portfolio"
 	var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(button_container, "position", Vector2(765.5, 408), 0.2)
-	tween.parallel().tween_property(title_label, "position", Vector2(0, 0), 0.2)
+	tween.tween_property(button_container, "position", button_container_start_position, 0.2)
+	tween.parallel().tween_property(title_label, "position", title_start_position, 0.2)
 	await get_tree().create_timer(0.2).timeout

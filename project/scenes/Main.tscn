@@ -1,10 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=22 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
+[ext_resource type="Script" path="res://scripts/UIExtras.gd" id="3_8bw7m"]
 [ext_resource type="Script" path="res://scripts/Game Development.gd" id="3_v448c"]
+[ext_resource type="Texture2D" uid="uid://cjjq7q5a6uejh" path="res://link.png" id="3_vea6p"]
 [ext_resource type="Script" path="res://scripts/Game Modding.gd" id="4_ryv0e"]
+[ext_resource type="Theme" uid="uid://b0yss1p5nj1kd" path="res://themes/project_title.tres" id="5_b0q10"]
 [ext_resource type="Script" path="res://scripts/Other.gd" id="5_hga6g"]
+[ext_resource type="Theme" uid="uid://b82i6157x1ybe" path="res://themes/project_short_discription.tres" id="6_5j7oe"]
+[ext_resource type="Theme" uid="uid://dhnx1ttflv3u0" path="res://themes/project_panel.tres" id="6_klrkb"]
+[ext_resource type="Theme" uid="uid://vo0pfg7gq7vk" path="res://themes/project_more_info_button.tres" id="10_dyrf3"]
+[ext_resource type="Texture2D" uid="uid://daxr4sl0et30m" path="res://images/A Night at the Graveyard/anatgy1.jpg" id="11_sy2pe"]
+[ext_resource type="PackedScene" uid="uid://bp7yk4478nxaq" path="res://scenes/album.tscn" id="11_vwuty"]
+[ext_resource type="Texture2D" uid="uid://bjigynht31wey" path="res://images/A Night at the Graveyard/anatgy2.jpg" id="12_t8u3i"]
+[ext_resource type="Texture2D" uid="uid://duodxsjkd04ap" path="res://images/A Night at the Graveyard/anatgy3.jpg" id="13_7jcaj"]
+[ext_resource type="Texture2D" uid="uid://bn3456r11jmcx" path="res://images/general/unity.png" id="14_agexn"]
+[ext_resource type="Texture2D" uid="uid://bc100yinb5awe" path="res://images/general/C_Sharp_Logo.svg" id="15_1oqq2"]
+[ext_resource type="Texture2D" uid="uid://cvgj271i665gt" path="res://images/general/itchio-textless-white.svg" id="16_1rj0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vqpq"]
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s21ag"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi4pv"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -14,31 +38,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 118.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 86
-text = "Portfolio"
-horizontal_alignment = 1
-
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 70.0
-offset_top = 41.0
-offset_right = 263.0
-offset_bottom = 108.0
-grow_vertical = 0
-theme = ExtResource("1_go8je")
-text = "Back"
+script = ExtResource("3_8bw7m")
 
 [node name="Main Menu" type="Control" parent="." node_paths=PackedStringArray("button_container", "title_label", "game_development_control", "game_modding_control", "other_control")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,13 +50,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_3wqkq")
-button_container = NodePath("VBoxContainer")
+button_container = NodePath("Buttons")
 title_label = NodePath("../Title")
 game_development_control = NodePath("../Game Development")
 game_modding_control = NodePath("../Game Modding")
 other_control = NodePath("../Other")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu"]
+[node name="Buttons" type="Control" parent="Main Menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,29 +69,69 @@ offset_right = 194.5
 offset_bottom = 222.366
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+pivot_offset = Vector2(196, 177.183)
 
-[node name="GameDevelopment" type="Button" parent="Main Menu/VBoxContainer"]
+[node name="GameDevelopment" type="Button" parent="Main Menu/Buttons"]
 layout_mode = 2
+offset_right = 393.0
+offset_bottom = 67.0
+pivot_offset = Vector2(196, 33)
 theme = ExtResource("1_go8je")
 text = "Game Development"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
 
-[node name="Game Modding" type="Button" parent="Main Menu/VBoxContainer"]
+[node name="Game Modding" type="Button" parent="Main Menu/Buttons"]
 layout_mode = 2
+offset_top = 87.0
+offset_right = 393.0
+offset_bottom = 154.0
+pivot_offset = Vector2(196, 33)
 theme = ExtResource("1_go8je")
 text = "Game Modding"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
 
-[node name="Artstation" type="Button" parent="Main Menu/VBoxContainer"]
+[node name="Artstation" type="Button" parent="Main Menu/Buttons"]
 layout_mode = 2
+offset_top = 174.0
+offset_right = 393.0
+offset_bottom = 241.0
+pivot_offset = Vector2(196, 33)
 theme = ExtResource("1_go8je")
 text = "ArtStation"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
 
-[node name="Other" type="Button" parent="Main Menu/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Main Menu/Buttons/Artstation"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -10.5
+offset_right = -6.5
+offset_bottom = 29.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("3_vea6p")
+expand_mode = 4
+
+[node name="Other" type="Button" parent="Main Menu/Buttons"]
 layout_mode = 2
+offset_top = 261.0
+offset_right = 393.0
+offset_bottom = 328.0
+pivot_offset = Vector2(196, 33)
 theme = ExtResource("1_go8je")
 text = "Other"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
 
-[node name="Game Development" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+[node name="Game Development" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control", "scroll_container")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,9 +143,166 @@ script = ExtResource("3_v448c")
 title_label = NodePath("../Title")
 back_button = NodePath("../BackButton")
 main_menu_control = NodePath("../Main Menu")
-back_button_end_position = Vector2(70, 970)
+scroll_container = NodePath("ScrollContainer")
+title_hidden_position = Vector2(0, -120)
+back_button_hidden_position = Vector2(70, 1121)
+scroll_container_hidden_position = Vector2(204.785, 1082)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Game Development"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -750.0
+offset_top = 121.0
+offset_right = 750.0
+offset_bottom = 959.055
+grow_horizontal = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Development/ScrollContainer"]
+custom_minimum_size = Vector2(1510.43, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+
+[node name="ANightAtTheGraveyard" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "A Night at the Graveyard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "A Night at the Graveyard created for AmalgamAsh’s Pit Jam. Defend against demons attacking the graveyard. Talk to people to gather information about the dead. Use that information to put together a monster to help defend."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -290.35
+offset_right = 240.0
+offset_bottom = -20.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("11_sy2pe"), ExtResource("12_t8u3i"), ExtResource("13_7jcaj")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Play and download from Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Game Modding" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -117,6 +317,7 @@ main_menu_control = NodePath("../Main Menu")
 back_button_end_position = Vector2(70, 970)
 
 [node name="Other" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -127,10 +328,61 @@ back_button = NodePath("../BackButton")
 main_menu_control = NodePath("../Main Menu")
 back_button_end_position = Vector2(70, 970)
 
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.87451, 0.87451, 0.87451, 1)
+theme_override_font_sizes/font_size = 86
+text = "Portfolio"
+horizontal_alignment = 1
+
+[node name="Header" type="Panel" parent="Title"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_go8je")
+theme_override_styles/panel = SubResource("StyleBoxFlat_s21ag")
+
+[node name="Footer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qi4pv")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 41.0
+offset_right = 263.0
+offset_bottom = 108.0
+grow_vertical = 0
+pivot_offset = Vector2(96, 33)
+theme = ExtResource("1_go8je")
+text = "Back"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[connection signal="pressed" from="Main Menu/Buttons/GameDevelopment" to="Main Menu" method="_on_game_development_pressed"]
+[connection signal="pressed" from="Main Menu/Buttons/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
+[connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
+[connection signal="pressed" from="Main Menu/Buttons/Other" to="Main Menu" method="_on_other_pressed"]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]
-[connection signal="pressed" from="Main Menu/VBoxContainer/GameDevelopment" to="Main Menu" method="_on_game_development_pressed"]
-[connection signal="pressed" from="Main Menu/VBoxContainer/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
-[connection signal="pressed" from="Main Menu/VBoxContainer/Artstation" to="Main Menu" method="_on_artstation_pressed"]
-[connection signal="pressed" from="Main Menu/VBoxContainer/Other" to="Main Menu" method="_on_other_pressed"]

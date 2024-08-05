@@ -41,7 +41,6 @@ mouse_filter = 2
 script = ExtResource("3_8bw7m")
 
 [node name="Main Menu" type="Control" parent="." node_paths=PackedStringArray("button_container", "title_label", "game_development_control", "game_modding_control", "other_control")]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,6 +131,7 @@ script = ExtResource("3_8bw7m")
 should_hover_scale = true
 
 [node name="Game Development" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control", "scroll_container")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

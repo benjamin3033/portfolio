@@ -16,7 +16,7 @@ func _ready():
 	next_image()
 
 
-func _process(_delta):
+func _process(_delta):	
 	$ProgressBar.value = $Timer.time_left
 
 

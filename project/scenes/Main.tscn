@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=49 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
@@ -11,11 +11,16 @@
 [ext_resource type="Theme" uid="uid://b82i6157x1ybe" path="res://themes/project_short_discription.tres" id="6_5j7oe"]
 [ext_resource type="Theme" uid="uid://dhnx1ttflv3u0" path="res://themes/project_panel.tres" id="6_klrkb"]
 [ext_resource type="Theme" uid="uid://vo0pfg7gq7vk" path="res://themes/project_more_info_button.tres" id="10_dyrf3"]
+[ext_resource type="Texture2D" uid="uid://dym2a8blliq4n" path="res://images/Light in Time/lightintime1.png" id="11_oqfcq"]
 [ext_resource type="Texture2D" uid="uid://daxr4sl0et30m" path="res://images/A Night at the Graveyard/anatgy1.jpg" id="11_sy2pe"]
 [ext_resource type="PackedScene" uid="uid://bp7yk4478nxaq" path="res://scenes/album.tscn" id="11_vwuty"]
+[ext_resource type="Texture2D" uid="uid://dgccx6mvwf068" path="res://images/Light in Time/lightintime2.png" id="12_40bmc"]
 [ext_resource type="Texture2D" uid="uid://bjigynht31wey" path="res://images/A Night at the Graveyard/anatgy2.jpg" id="12_t8u3i"]
 [ext_resource type="Texture2D" uid="uid://duodxsjkd04ap" path="res://images/A Night at the Graveyard/anatgy3.jpg" id="13_7jcaj"]
+[ext_resource type="Texture2D" uid="uid://dnesupb17ga70" path="res://images/Light in Time/lightintime3.png" id="13_fx32s"]
 [ext_resource type="Texture2D" uid="uid://bn3456r11jmcx" path="res://images/general/unity.png" id="14_agexn"]
+[ext_resource type="Texture2D" uid="uid://cwtm0xdywaugf" path="res://images/general/godot.svg" id="14_cbiav"]
+[ext_resource type="Texture2D" uid="uid://coewdekjxc5cc" path="res://images/general/UE-Icon-2023-White.svg" id="14_vdr4s"]
 [ext_resource type="Texture2D" uid="uid://bc100yinb5awe" path="res://images/general/C_Sharp_Logo.svg" id="15_1oqq2"]
 [ext_resource type="Texture2D" uid="uid://cvgj271i665gt" path="res://images/general/itchio-textless-white.svg" id="16_1rj0w"]
 [ext_resource type="Texture2D" uid="uid://d4kkinyhsfj23" path="res://images/Short Staffed/shortstaffed1.jpg" id="17_bhfy2"]
@@ -27,6 +32,20 @@
 [ext_resource type="Texture2D" uid="uid://nuykjuhw006e" path="res://images/Short Staffed/shortstaffed4.jpg" id="20_jat3v"]
 [ext_resource type="Texture2D" uid="uid://d2yoxvfgfusuc" path="res://images/Short Staffed/shortstaffed5.jpg" id="21_3f0x4"]
 [ext_resource type="Texture2D" uid="uid://bw4hvbefgbe81" path="res://images/general/Steam_icon_logo.svg.png" id="22_onmnd"]
+[ext_resource type="Texture2D" uid="uid://binpb3pgugunp" path="res://images/Dimensional Seesaw/dimensionalseesaw1.jpg" id="26_hpqw3"]
+[ext_resource type="Texture2D" uid="uid://c5pcumhwky8up" path="res://images/Dimensional Seesaw/dimensionalseesaw2.jpg" id="27_45b4x"]
+[ext_resource type="Texture2D" uid="uid://d0awvhv1l6x58" path="res://images/Dimensional Seesaw/dimensionalseesaw3.jpg" id="28_k4vig"]
+[ext_resource type="Texture2D" uid="uid://3qyktskgdble" path="res://images/Perilous Planets/PerilousPlanets1.png" id="29_c7c1n"]
+[ext_resource type="Texture2D" uid="uid://0sbgvdtga5o7" path="res://images/Perilous Planets/PerilousPlanets2.png" id="30_nwb27"]
+[ext_resource type="Texture2D" uid="uid://gydpd76sr671" path="res://images/Perilous Planets/PerilousPlanets3.png" id="31_y313i"]
+[ext_resource type="Texture2D" uid="uid://ccx3g1i01uupb" path="res://images/PuzzleGame/PuzzleGame.png" id="32_tfv80"]
+[ext_resource type="Texture2D" uid="uid://c38eavlutn4nh" path="res://images/PuzzleGame/PuzzleGame2.png" id="33_hyscy"]
+[ext_resource type="Texture2D" uid="uid://goum4bq1tn8r" path="res://images/PuzzleGame/PuzzleGame3.png" id="34_1mdio"]
+[ext_resource type="Texture2D" uid="uid://bgfl2rrc3eu3y" path="res://images/Space Ambush/spaceambush1.png" id="36_6hcad"]
+[ext_resource type="Texture2D" uid="uid://d24whu3c8q5js" path="res://images/Space Ambush/spaceambush2.png" id="37_0tk8i"]
+[ext_resource type="Texture2D" uid="uid://xo1kwotx81jv" path="res://images/Space Ambush/spaceambush3.png" id="38_hl716"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkcw8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vqpq"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -176,6 +195,162 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 15
 
+[node name="TOP" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9.36)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
+
+[node name="A Light in Time" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Light in Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "2D / 3D puzzle game. The player has been shrunk down and needs to find a way to get back to normal."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("11_oqfcq"), ExtResource("12_40bmc"), ExtResource("13_fx32s")])
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Jul 31, 2024"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Godot" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_cbiav")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/MadeWithContainer"]
+layout_mode = 2
+text = "GDScript"
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ANightAtTheGraveyard" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 361.35)
 layout_mode = 2
@@ -240,13 +415,30 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -240.0
-offset_top = -290.35
-offset_right = 240.0
-offset_bottom = -20.35
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
 grow_horizontal = 2
 grow_vertical = 0
 images = Array[Texture2D]([ExtResource("11_sy2pe"), ExtResource("12_t8u3i"), ExtResource("13_7jcaj")])
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Mar 18, 2024"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
 layout_mode = 1
@@ -375,10 +567,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -240.0
-offset_top = -290.35
-offset_right = 240.0
-offset_bottom = -20.35
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
 grow_horizontal = 2
 grow_vertical = 0
 images = Array[Texture2D]([ExtResource("17_mljxe"), ExtResource("18_00fxs"), ExtResource("19_ego68")])
@@ -446,6 +638,23 @@ text = "Play and download on Itch.io"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Nov 30, 2023"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ShortStaffed" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 361.35)
 layout_mode = 2
@@ -510,10 +719,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -240.0
-offset_top = -290.35
-offset_right = 240.0
-offset_bottom = -20.35
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
 grow_horizontal = 2
 grow_vertical = 0
 images = Array[Texture2D]([ExtResource("17_bhfy2"), ExtResource("18_4y3nt"), ExtResource("19_vsqtq"), ExtResource("20_jat3v"), ExtResource("21_3f0x4")])
@@ -581,6 +790,635 @@ theme_override_font_sizes/font_size = 38
 text = "Demo and full game on Steam"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "18 Oct, 2023"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PerilousPlanets" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Perilous Planets"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Short simple game made to learn unity. 3 levels where the player must find keys in to activate the portal to go to the next level. Made in a week from a design document we made. I made the final level."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("29_c7c1n"), ExtResource("30_nwb27"), ExtResource("31_y313i")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Jun 10, 2022"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PuzzleGame" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Puzzle Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Created to learn unreal engine in a group of 3. Used the unreal FPS template. Unreal blueprints were used to create the goals, launchers and targets. I created levels 3, 5, and 7. The levels can be switched by using the number row on the keyboard."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("32_tfv80"), ExtResource("33_hyscy"), ExtResource("34_1mdio")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unreal" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_vdr4s")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame/MadeWithContainer"]
+layout_mode = 2
+text = "Blueprints"
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "May 10, 2022"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DimensionalSeesaw" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Dimensional Seesaw"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Dimensional Seesaw is a first-person shooter with level design similar to 90s shooters. Switch between different dimensions while fighting horrific and challenging enemies."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("26_hpqw3"), ExtResource("27_45b4x"), ExtResource("28_k4vig")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Dec 9, 2021"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceAmbush" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Space Ambush"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Defend the planet from the incoming invasion. One button game made in a few hours. I did the programming for the game and the sound effects."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("36_6hcad"), ExtResource("37_0tk8i"), ExtResource("38_hl716")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "Oct 9, 2021"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BOTTOM" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9.36)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
 
 [node name="Game Modding" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
 visible = false
@@ -663,9 +1501,14 @@ should_hover_scale = true
 [connection signal="pressed" from="Main Menu/Buttons/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Other" to="Main Menu" method="_on_other_pressed"]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/A Light in Time/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SCALE/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/Steam" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/perilous-planets"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/PuzzleGame/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/puzzle-game"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/Itch_io" to="." method="open_website" binds= ["https://meaglenz.itch.io/dimensional-seesaw"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/space-ambush"]]
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=31 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
@@ -18,6 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://bn3456r11jmcx" path="res://images/general/unity.png" id="14_agexn"]
 [ext_resource type="Texture2D" uid="uid://bc100yinb5awe" path="res://images/general/C_Sharp_Logo.svg" id="15_1oqq2"]
 [ext_resource type="Texture2D" uid="uid://cvgj271i665gt" path="res://images/general/itchio-textless-white.svg" id="16_1rj0w"]
+[ext_resource type="Texture2D" uid="uid://d4kkinyhsfj23" path="res://images/Short Staffed/shortstaffed1.jpg" id="17_bhfy2"]
+[ext_resource type="Texture2D" uid="uid://m0yqiwk2cbnq" path="res://images/SCALE/scale1.png" id="17_mljxe"]
+[ext_resource type="Texture2D" uid="uid://d2yu7xr1kv00e" path="res://images/SCALE/scale2.png" id="18_00fxs"]
+[ext_resource type="Texture2D" uid="uid://f1fc62fcd1tl" path="res://images/Short Staffed/shortstaffed2.jpg" id="18_4y3nt"]
+[ext_resource type="Texture2D" uid="uid://x546v0if0hbq" path="res://images/SCALE/scale3.png" id="19_ego68"]
+[ext_resource type="Texture2D" uid="uid://oh26nvux2ki4" path="res://images/Short Staffed/shortstaffed3.jpg" id="19_vsqtq"]
+[ext_resource type="Texture2D" uid="uid://nuykjuhw006e" path="res://images/Short Staffed/shortstaffed4.jpg" id="20_jat3v"]
+[ext_resource type="Texture2D" uid="uid://d2yoxvfgfusuc" path="res://images/Short Staffed/shortstaffed5.jpg" id="21_3f0x4"]
+[ext_resource type="Texture2D" uid="uid://bw4hvbefgbe81" path="res://images/general/Steam_icon_logo.svg.png" id="22_onmnd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vqpq"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -208,6 +217,7 @@ autowrap_mode = 2
 clip_text = true
 
 [node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -297,7 +307,278 @@ offset_bottom = 2.755
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
 theme_override_font_sizes/font_size = 38
-text = "Play and download from Itch.io"
+text = "Play and download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SCALE" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Santa's Christmas Adventure Liberation Esacpe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Created for the Game Off 2023 game Jam. Top down shooter fighting waves of enemies trying to survive for a specific time. Making use of random generation for the level and AI to control the enemies."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/SCALE" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -290.35
+offset_right = 240.0
+offset_bottom = -20.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("17_mljxe"), ExtResource("18_00fxs"), ExtResource("19_ego68")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/SCALE/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/SCALE/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -377.785
+offset_top = -91.675
+offset_right = -115.785
+offset_bottom = 143.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(126.255, 119.715)
+texture_normal = ExtResource("16_1rj0w")
+texture_pressed = ExtResource("16_1rj0w")
+texture_hover = ExtResource("16_1rj0w")
+texture_disabled = ExtResource("16_1rj0w")
+texture_focused = ExtResource("16_1rj0w")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.43, 0.43)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SCALE/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = -105.0
+offset_right = 270.0
+offset_bottom = 2.755
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Play and download on Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortStaffed" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "Short Staffed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "Players are thrust into the delightful mayhem of a bustling food and drink establishment. Get ready to serve up a side of laughter as you and your friends take on the roles of zany waitstaff, working tirelessly to fulfil customer orders."
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -290.35
+offset_right = 240.0
+offset_bottom = -20.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("17_bhfy2"), ExtResource("18_4y3nt"), ExtResource("19_vsqtq"), ExtResource("20_jat3v"), ExtResource("21_3f0x4")])
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unity" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("14_agexn")
+expand_mode = 3
+
+[node name="CSharp" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("15_1oqq2")
+expand_mode = 3
+
+[node name="Steam" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1243.78
+offset_top = -965.675
+offset_right = 804.215
+offset_bottom = 1082.32
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.048534, 0.048534)
+pivot_offset = Vector2(1000, 1000)
+texture_normal = ExtResource("22_onmnd")
+texture_pressed = ExtResource("22_onmnd")
+texture_hover = ExtResource("22_onmnd")
+texture_disabled = ExtResource("22_onmnd")
+texture_focused = ExtResource("22_onmnd")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.052, 0.052)
+
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/Steam"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2322.06
+offset_top = -803.56
+offset_right = -1769.06
+offset_bottom = -695.805
+grow_horizontal = 2
+scale = Vector2(8.68, 8.68)
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Demo and full game on Steam"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -383,6 +664,8 @@ should_hover_scale = true
 [connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Other" to="Main Menu" method="_on_other_pressed"]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SCALE/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/Steam" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]

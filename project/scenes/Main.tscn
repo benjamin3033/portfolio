@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=55 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
@@ -44,6 +44,12 @@
 [ext_resource type="Texture2D" uid="uid://bgfl2rrc3eu3y" path="res://images/Space Ambush/spaceambush1.png" id="36_6hcad"]
 [ext_resource type="Texture2D" uid="uid://d24whu3c8q5js" path="res://images/Space Ambush/spaceambush2.png" id="37_0tk8i"]
 [ext_resource type="Texture2D" uid="uid://xo1kwotx81jv" path="res://images/Space Ambush/spaceambush3.png" id="38_hl716"]
+[ext_resource type="Texture2D" uid="uid://cvn1cwsm1gokj" path="res://images/WebSocket Commands/wsc1.jpeg" id="44_nst2q"]
+[ext_resource type="Texture2D" uid="uid://6uyw7suckvjk" path="res://images/WebSocket Commands/wsc2.jpeg" id="45_fe21t"]
+[ext_resource type="Texture2D" uid="uid://d1yfhjywxi2kt" path="res://images/WebSocket Commands/wsc3.jpeg" id="46_34ccl"]
+[ext_resource type="Texture2D" uid="uid://bcekgooeomxlg" path="res://images/general/java-logo-1.png" id="47_csb8h"]
+[ext_resource type="Texture2D" uid="uid://2b3k47twjxm8" path="res://images/general/fabric.png" id="48_coqok"]
+[ext_resource type="Texture2D" uid="uid://8e0sv11mhxcs" path="res://images/general/modrinth.svg" id="49_6dxws"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkcw8"]
 
@@ -200,12 +206,12 @@ custom_minimum_size = Vector2(0, 9.36)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
 
-[node name="A Light in Time" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
+[node name="Light in Time" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 361.35)
 layout_mode = 2
 theme = ExtResource("6_klrkb")
 
-[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="TitleBG" type="Panel" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -214,7 +220,7 @@ grow_horizontal = 2
 theme = ExtResource("6_klrkb")
 theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
 
-[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -229,7 +235,7 @@ text = "Light in Time"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="ShortDescription" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 offset_left = 33.215
 offset_top = 73.0
@@ -240,7 +246,7 @@ text = "2D / 3D puzzle game. The player has been shrunk down and needs to find a
 autowrap_mode = 2
 clip_text = true
 
-[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="ReadMoreButton" type="Button" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 visible = false
 layout_mode = 1
 anchors_preset = 2
@@ -257,7 +263,7 @@ text = "Read More"
 script = ExtResource("3_8bw7m")
 should_hover_scale = true
 
-[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time" instance=ExtResource("11_vwuty")]
+[node name="Album" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time" instance=ExtResource("11_vwuty")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -272,7 +278,7 @@ grow_horizontal = 2
 grow_vertical = 0
 images = Array[Texture2D]([ExtResource("11_oqfcq"), ExtResource("12_40bmc"), ExtResource("13_fx32s")])
 
-[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -289,7 +295,7 @@ text = "Jul 31, 2024"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -301,16 +307,16 @@ offset_bottom = 104.805
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Godot" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/MadeWithContainer"]
+[node name="Godot" type="TextureRect" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time/MadeWithContainer"]
 layout_mode = 2
 texture = ExtResource("14_cbiav")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/MadeWithContainer"]
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time/MadeWithContainer"]
 layout_mode = 2
 text = "GDScript"
 
-[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time"]
+[node name="Itch_io" type="TextureButton" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -335,7 +341,7 @@ script = ExtResource("3_8bw7m")
 should_hover_scale = true
 hover_scale_value = Vector2(0.43, 0.43)
 
-[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/A Light in Time/Itch_io"]
+[node name="Label" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time/Itch_io"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1420,7 +1426,7 @@ custom_minimum_size = Vector2(0, 9.36)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
 
-[node name="Game Modding" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
+[node name="Game Modding" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control", "scroll_container")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1433,7 +1439,189 @@ script = ExtResource("4_ryv0e")
 title_label = NodePath("../Title")
 back_button = NodePath("../BackButton")
 main_menu_control = NodePath("../Main Menu")
-back_button_end_position = Vector2(70, 970)
+scroll_container = NodePath("ScrollContainer")
+container_hidden_position = Vector2(0, 965)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Game Modding"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -750.0
+offset_top = 121.0
+offset_right = 750.0
+offset_bottom = 959.055
+grow_horizontal = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Modding/ScrollContainer"]
+custom_minimum_size = Vector2(1510.43, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+
+[node name="TOP" type="Panel" parent="Game Modding/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9.36)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
+
+[node name="Websocket Commands" type="Panel" parent="Game Modding/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 361.35)
+layout_mode = 2
+theme = ExtResource("6_klrkb")
+
+[node name="TitleBG" type="Panel" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.42
+grow_horizontal = 2
+theme = ExtResource("6_klrkb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+
+[node name="Title" type="Label" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 2.0
+offset_right = 179.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("5_b0q10")
+text = "WebSocket Commands"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortDescription" type="Label" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+offset_left = 33.215
+offset_top = 73.0
+offset_right = 487.336
+offset_bottom = 209.67
+theme = ExtResource("6_5j7oe")
+text = "A mod that I created for Minecraft using fabric. Created to be used along side streamer.bot. It runs a websocket server that you can connect streamer.bot to. Then you can send commands to the server from streamer.bot"
+autowrap_mode = 2
+clip_text = true
+
+[node name="ReadMoreButton" type="Button" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.215
+offset_top = -64.35
+offset_right = 145.215
+offset_bottom = -28.35
+grow_vertical = 0
+pivot_offset = Vector2(52.97, 18.03)
+theme = ExtResource("10_dyrf3")
+text = "Read More"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Album" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands" instance=ExtResource("11_vwuty")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.5
+offset_top = -287.35
+offset_right = 219.5
+offset_bottom = -40.35
+grow_horizontal = 2
+grow_vertical = 0
+images = Array[Texture2D]([ExtResource("44_nst2q"), ExtResource("45_fe21t"), ExtResource("46_34ccl")])
+
+[node name="Date" type="Label" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -33.35
+offset_right = 49.5
+offset_bottom = -10.35
+grow_horizontal = 2
+grow_vertical = 0
+text = "May 31, 2024"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeWithContainer" type="HBoxContainer" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.215
+offset_top = 36.325
+offset_right = 424.215
+offset_bottom = 104.805
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Java" type="TextureRect" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("47_csb8h")
+expand_mode = 3
+
+[node name="Fabric" type="TextureRect" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands/MadeWithContainer"]
+layout_mode = 2
+texture = ExtResource("48_coqok")
+expand_mode = 3
+
+[node name="Itch_io" type="TextureButton" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -233.675
+offset_bottom = 280.325
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(252.76, 258.545)
+texture_normal = ExtResource("49_6dxws")
+texture_pressed = ExtResource("49_6dxws")
+texture_hover = ExtResource("49_6dxws")
+texture_disabled = ExtResource("49_6dxws")
+texture_focused = ExtResource("49_6dxws")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.22, 0.22)
+
+[node name="Label" type="Label" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands/Itch_io"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -471.523
+offset_top = -179.918
+offset_right = 68.4771
+offset_bottom = -72.1628
+grow_horizontal = 2
+scale = Vector2(1.74916, 1.74916)
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 38
+text = "Download on Modrinth"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BOTTOM" type="Panel" parent="Game Modding/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9.36)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nkcw8")
 
 [node name="Other" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control")]
 visible = false
@@ -1501,14 +1689,15 @@ should_hover_scale = true
 [connection signal="pressed" from="Main Menu/Buttons/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Other" to="Main Menu" method="_on_other_pressed"]
-[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/A Light in Time/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/Light in Time/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/light-in-time"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SCALE/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
-[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/Steam" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
+[connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ShortStaffed/Steam" to="." method="open_website" binds= ["https://store.steampowered.com/app/2172370/Short_Staffed/"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/perilous-planets"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/PuzzleGame/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/puzzle-game"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/Itch_io" to="." method="open_website" binds= ["https://meaglenz.itch.io/dimensional-seesaw"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/space-ambush"]]
+[connection signal="pressed" from="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]

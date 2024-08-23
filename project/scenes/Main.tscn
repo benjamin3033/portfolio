@@ -1,10 +1,11 @@
-[gd_scene load_steps=55 format=3 uid="uid://cyqxmwqu2cl0s"]
+[gd_scene load_steps=63 format=3 uid="uid://cyqxmwqu2cl0s"]
 
 [ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_3wqkq"]
 [ext_resource type="Theme" uid="uid://dead0m1eas4n" path="res://themes/menu_buttons.tres" id="1_go8je"]
+[ext_resource type="Script" path="res://scripts/background_texture_rect.gd" id="3_1l2vr"]
 [ext_resource type="Script" path="res://scripts/UIExtras.gd" id="3_8bw7m"]
 [ext_resource type="Script" path="res://scripts/Game Development.gd" id="3_v448c"]
-[ext_resource type="Texture2D" uid="uid://cjjq7q5a6uejh" path="res://link.png" id="3_vea6p"]
+[ext_resource type="Texture2D" uid="uid://cjjq7q5a6uejh" path="res://images/general/link.png" id="3_vea6p"]
 [ext_resource type="Script" path="res://scripts/Game Modding.gd" id="4_ryv0e"]
 [ext_resource type="Theme" uid="uid://b0yss1p5nj1kd" path="res://themes/project_title.tres" id="5_b0q10"]
 [ext_resource type="Script" path="res://scripts/Other.gd" id="5_hga6g"]
@@ -36,13 +37,16 @@
 [ext_resource type="Texture2D" uid="uid://c5pcumhwky8up" path="res://images/Dimensional Seesaw/dimensionalseesaw2.jpg" id="27_45b4x"]
 [ext_resource type="Texture2D" uid="uid://d0awvhv1l6x58" path="res://images/Dimensional Seesaw/dimensionalseesaw3.jpg" id="28_k4vig"]
 [ext_resource type="Texture2D" uid="uid://3qyktskgdble" path="res://images/Perilous Planets/PerilousPlanets1.png" id="29_c7c1n"]
+[ext_resource type="Shader" path="res://shaders/blur.gdshader" id="30_lmoud"]
 [ext_resource type="Texture2D" uid="uid://0sbgvdtga5o7" path="res://images/Perilous Planets/PerilousPlanets2.png" id="30_nwb27"]
 [ext_resource type="Texture2D" uid="uid://gydpd76sr671" path="res://images/Perilous Planets/PerilousPlanets3.png" id="31_y313i"]
 [ext_resource type="Texture2D" uid="uid://ccx3g1i01uupb" path="res://images/PuzzleGame/PuzzleGame.png" id="32_tfv80"]
 [ext_resource type="Texture2D" uid="uid://c38eavlutn4nh" path="res://images/PuzzleGame/PuzzleGame2.png" id="33_hyscy"]
 [ext_resource type="Texture2D" uid="uid://goum4bq1tn8r" path="res://images/PuzzleGame/PuzzleGame3.png" id="34_1mdio"]
 [ext_resource type="Texture2D" uid="uid://bgfl2rrc3eu3y" path="res://images/Space Ambush/spaceambush1.png" id="36_6hcad"]
+[ext_resource type="Theme" uid="uid://bgaqteg02vk6e" path="res://themes/project_panel_title_bg.tres" id="36_14a61"]
 [ext_resource type="Texture2D" uid="uid://d24whu3c8q5js" path="res://images/Space Ambush/spaceambush2.png" id="37_0tk8i"]
+[ext_resource type="LabelSettings" uid="uid://cqrcvd3l4o0s7" path="res://themes/project_title_label.tres" id="38_he70m"]
 [ext_resource type="Texture2D" uid="uid://xo1kwotx81jv" path="res://images/Space Ambush/spaceambush3.png" id="38_hl716"]
 [ext_resource type="Texture2D" uid="uid://cvn1cwsm1gokj" path="res://images/WebSocket Commands/wsc1.jpeg" id="44_nst2q"]
 [ext_resource type="Texture2D" uid="uid://6uyw7suckvjk" path="res://images/WebSocket Commands/wsc2.jpeg" id="45_fe21t"]
@@ -50,19 +54,23 @@
 [ext_resource type="Texture2D" uid="uid://bcekgooeomxlg" path="res://images/general/java-logo-1.png" id="47_csb8h"]
 [ext_resource type="Texture2D" uid="uid://2b3k47twjxm8" path="res://images/general/fabric.png" id="48_coqok"]
 [ext_resource type="Texture2D" uid="uid://8e0sv11mhxcs" path="res://images/general/modrinth.svg" id="49_6dxws"]
+[ext_resource type="Theme" uid="uid://c54y7xmc6kr0d" path="res://themes/header.tres" id="53_olx51"]
+[ext_resource type="FontFile" uid="uid://cktl74g88xs1b" path="res://fonts/RedHatDisplay-VariableFont_wght.ttf" id="54_mts7g"]
+[ext_resource type="Texture2D" uid="uid://dq3nacumugeub" path="res://images/general/YouTube.svg" id="57_727l2"]
+[ext_resource type="Texture2D" uid="uid://cnwl4jqpaqh0p" path="res://images/general/X-Logo.png" id="58_o68ae"]
+[ext_resource type="Texture2D" uid="uid://dp20tre83srdj" path="res://images/general/twitch.png" id="59_8paww"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_28w5b"]
+shader = ExtResource("30_lmoud")
+shader_parameter/blur_amount = 3.521
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 0.388235)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkcw8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vqpq"]
-bg_color = Color(0.125911, 0.125911, 0.125911, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s21ag"]
-bg_color = Color(0.176471, 0.176471, 0.176471, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi4pv"]
-bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_regc3"]
+font = ExtResource("54_mts7g")
+font_size = 80
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -73,6 +81,36 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("3_8bw7m")
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." node_paths=PackedStringArray("next")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_t8u3i")
+expand_mode = 1
+script = ExtResource("3_1l2vr")
+next = NodePath("Next")
+images = Array[Texture2D]([ExtResource("12_t8u3i"), ExtResource("13_7jcaj"), ExtResource("26_hpqw3"), ExtResource("27_45b4x"), ExtResource("28_k4vig"), ExtResource("11_oqfcq"), ExtResource("12_40bmc"), ExtResource("13_fx32s"), ExtResource("29_c7c1n"), ExtResource("30_nwb27"), ExtResource("31_y313i"), ExtResource("33_hyscy"), ExtResource("34_1mdio"), ExtResource("32_tfv80"), ExtResource("17_mljxe"), ExtResource("18_00fxs"), ExtResource("19_ego68"), ExtResource("17_bhfy2"), ExtResource("18_4y3nt"), ExtResource("19_vsqtq"), ExtResource("20_jat3v"), ExtResource("21_3f0x4"), ExtResource("36_6hcad"), ExtResource("37_0tk8i"), ExtResource("38_hl716"), ExtResource("44_nst2q"), ExtResource("45_fe21t")])
+
+[node name="Next" type="TextureRect" parent="BackgroundTextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_28w5b")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Main Menu" type="Control" parent="." node_paths=PackedStringArray("button_container", "title_label", "game_development_control", "game_modding_control", "other_control")]
 layout_mode = 1
@@ -125,11 +163,22 @@ text = "Game Modding"
 script = ExtResource("3_8bw7m")
 should_hover_scale = true
 
-[node name="Artstation" type="Button" parent="Main Menu/Buttons"]
+[node name="Other" type="Button" parent="Main Menu/Buttons"]
 layout_mode = 2
 offset_top = 174.0
 offset_right = 393.0
 offset_bottom = 241.0
+pivot_offset = Vector2(196, 33)
+theme = ExtResource("1_go8je")
+text = "Other"
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="Artstation" type="Button" parent="Main Menu/Buttons"]
+layout_mode = 2
+offset_top = 260.0
+offset_right = 393.0
+offset_bottom = 327.0
 pivot_offset = Vector2(196, 33)
 theme = ExtResource("1_go8je")
 text = "ArtStation"
@@ -152,17 +201,6 @@ grow_vertical = 2
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("3_vea6p")
 expand_mode = 4
-
-[node name="Other" type="Button" parent="Main Menu/Buttons"]
-layout_mode = 2
-offset_top = 261.0
-offset_right = 393.0
-offset_bottom = 328.0
-pivot_offset = Vector2(196, 33)
-theme = ExtResource("1_go8je")
-text = "Other"
-script = ExtResource("3_8bw7m")
-should_hover_scale = true
 
 [node name="Game Development" type="Control" parent="." node_paths=PackedStringArray("title_label", "back_button", "main_menu_control", "scroll_container")]
 visible = false
@@ -217,8 +255,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
 layout_mode = 1
@@ -232,6 +269,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Light in Time"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -276,6 +314,7 @@ offset_right = 219.5
 offset_bottom = -40.35
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(219.225, 126.67)
 images = Array[Texture2D]([ExtResource("11_oqfcq"), ExtResource("12_40bmc"), ExtResource("13_fx32s")])
 
 [node name="Date" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/Light in Time"]
@@ -368,8 +407,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard"]
 layout_mode = 1
@@ -383,6 +421,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "A Night at the Graveyard"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -520,8 +559,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SCALE"]
 layout_mode = 1
@@ -535,6 +573,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Santa's Christmas Adventure Liberation Esacpe"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -672,8 +711,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/ShortStaffed"]
 layout_mode = 1
@@ -687,6 +725,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Short Staffed"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -825,8 +864,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PerilousPlanets"]
 layout_mode = 1
@@ -840,6 +878,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Perilous Planets"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -977,8 +1016,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/PuzzleGame"]
 layout_mode = 1
@@ -992,6 +1030,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Puzzle Game"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1128,8 +1167,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw"]
 layout_mode = 1
@@ -1143,6 +1181,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Dimensional Seesaw"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1280,8 +1319,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush"]
 layout_mode = 1
@@ -1295,6 +1333,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "Space Ambush"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1477,8 +1516,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 50.42
 grow_horizontal = 2
-theme = ExtResource("6_klrkb")
-theme_override_styles/panel = SubResource("StyleBoxFlat_7vqpq")
+theme = ExtResource("36_14a61")
 
 [node name="Title" type="Label" parent="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands"]
 layout_mode = 1
@@ -1492,6 +1530,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 theme = ExtResource("5_b0q10")
 text = "WebSocket Commands"
+label_settings = ExtResource("38_he70m")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1644,6 +1683,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.87451, 0.87451, 0.87451, 1)
 theme_override_font_sizes/font_size = 86
 text = "Portfolio"
+label_settings = SubResource("LabelSettings_regc3")
 horizontal_alignment = 1
 
 [node name="Header" type="Panel" parent="Title"]
@@ -1655,8 +1695,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource("1_go8je")
-theme_override_styles/panel = SubResource("StyleBoxFlat_s21ag")
+theme = ExtResource("53_olx51")
 
 [node name="Footer" type="Panel" parent="."]
 layout_mode = 1
@@ -1667,7 +1706,67 @@ anchor_bottom = 1.0
 offset_top = -120.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_qi4pv")
+theme = ExtResource("53_olx51")
+
+[node name="YoutubeTextureButton" type="TextureButton" parent="Footer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -30.0
+offset_right = -34.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(42.505, 30.405)
+texture_normal = ExtResource("57_727l2")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+
+[node name="XTextureButton" type="TextureButton" parent="Footer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1981.0
+offset_top = -1002.0
+offset_right = 1859.0
+offset_bottom = 1158.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.027, 0.027)
+pivot_offset = Vector2(1800, 1000)
+texture_normal = ExtResource("58_o68ae")
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.033, 0.033)
+
+[node name="TwitchTextureButton" type="TextureButton" parent="Footer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -952.0
+offset_top = -800.0
+offset_right = 419.0
+offset_bottom = 800.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.036, 0.036)
+pivot_offset = Vector2(685.5, 800)
+texture_normal = ExtResource("59_8paww")
+stretch_mode = 0
+script = ExtResource("3_8bw7m")
+should_hover_scale = true
+hover_scale_value = Vector2(0.044, 0.044)
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 1
@@ -1687,8 +1786,8 @@ should_hover_scale = true
 
 [connection signal="pressed" from="Main Menu/Buttons/GameDevelopment" to="Main Menu" method="_on_game_development_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Game Modding" to="Main Menu" method="_on_game_modding_pressed"]
-[connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
 [connection signal="pressed" from="Main Menu/Buttons/Other" to="Main Menu" method="_on_other_pressed"]
+[connection signal="pressed" from="Main Menu/Buttons/Artstation" to="Main Menu" method="_on_artstation_pressed"]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/Light in Time/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/light-in-time"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/ANightAtTheGraveyard/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SCALE/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/santas-christmas-adventure-liberation-escape"]]
@@ -1698,6 +1797,9 @@ should_hover_scale = true
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/DimensionalSeesaw/Itch_io" to="." method="open_website" binds= ["https://meaglenz.itch.io/dimensional-seesaw"]]
 [connection signal="pressed" from="Game Development/ScrollContainer/VBoxContainer/SpaceAmbush/Itch_io" to="." method="open_website" binds= ["https://benjamin3033.itch.io/space-ambush"]]
 [connection signal="pressed" from="Game Modding/ScrollContainer/VBoxContainer/Websocket Commands/Itch_io" to="." method="open_website" binds= ["https://crypticpanther.itch.io/a-night-at-the-graveyard"]]
+[connection signal="pressed" from="Footer/YoutubeTextureButton" to="." method="open_website" binds= ["https://www.youtube.com/@benjamin30332"]]
+[connection signal="pressed" from="Footer/XTextureButton" to="." method="open_website" binds= ["https://x.com/benjamin3033"]]
+[connection signal="pressed" from="Footer/TwitchTextureButton" to="." method="open_website" binds= ["https://www.twitch.tv/benjamin3033"]]
 [connection signal="pressed" from="BackButton" to="Game Development" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Game Modding" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="Other" method="_on_back_button_pressed"]

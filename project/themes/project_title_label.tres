@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cqrcvd3l4o0s7"]
+
+[ext_resource type="FontFile" uid="uid://cktl74g88xs1b" path="res://fonts/RedHatDisplay-VariableFont_wght.ttf" id="1_nb47f"]
+
+[resource]
+font = ExtResource("1_nb47f")
+font_size = 36
